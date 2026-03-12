@@ -1,5 +1,5 @@
 // 1. IMPORTACIONES (Traemos el equipo especializado)
-import { Vistas, productos, combos } from './data.js';
+import { Vistas, productos, combos, coffies } from './data.js';
 import { renderizarItems } from './ui.js';
 import { navegar } from './navigation.js';
 
@@ -8,6 +8,7 @@ import { navegar } from './navigation.js';
 const header_logo = document.querySelector('.header-logo');
 const header_productos = document.querySelector('.header_productos');
 const header_combos = document.querySelector('.header_combos');
+const header_racoon_coffies = document.querySelector('.header_coffies');
 
 // Sidebar y Botones de Acción
 const btn_Menu_SB = document.getElementById('btn-menu-sb');
@@ -20,12 +21,14 @@ const btn_explorar_combos_menu = document.querySelector('.btn_explorar_combos_me
 const seccionesMap = {
     [Vistas.HERO]: document.getElementById('hero'),
     [Vistas.MENU]: document.getElementById('menu_section'),
-    [Vistas.COMBOS]: document.getElementById('combos_section')
+    [Vistas.COMBOS]: document.getElementById('combos_section'),
+    [Vistas.COFFIES]: document.getElementById('coffies_section')
 };
 
 // Contenedores de Inyección de Datos
 const productos_container = document.getElementById('productos_container');
 const combos_container = document.getElementById('combos_container');
+const coffies_container = document.getElementById('coffies_container');
 
 // 3. SISTEMA DE FILTRADO (Lógica de precisión)
 // Filtros para la sección de Productos
@@ -57,6 +60,7 @@ window.addEventListener('hashchange', () => {
 header_logo.addEventListener('click', (e) => { e.preventDefault(); navegar(Vistas.HERO, seccionesMap); });
 header_productos.addEventListener('click', (e) => { e.preventDefault(); navegar(Vistas.MENU, seccionesMap); });
 header_combos.addEventListener('click', (e) => { e.preventDefault(); navegar(Vistas.COMBOS, seccionesMap); });
+header_racoon_coffies.addEventListener('click', (e) => { e.preventDefault(); navegar(Vistas.COFFIES, seccionesMap); });
 
 // Navegación desde botones internos
 btn_explorar_m_hero.addEventListener('click', () => navegar(Vistas.MENU, seccionesMap));
@@ -70,6 +74,7 @@ btn_close_sb.addEventListener('click', () => btn_Sidebar.classList.remove('activ
 // Dibujamos el inventario inicial en sus respectivos contenedores
 renderizarItems(productos, productos_container);
 renderizarItems(combos, combos_container);
+renderizarItems(coffies, coffies_container);
 
 // Validamos la ruta actual al cargar la página
 const vistaInicial = window.location.hash.replace('#', '') || Vistas.HERO;

@@ -1,7 +1,8 @@
 export const Vistas = Object.freeze({
     HERO: 'inicio',
     MENU: 'productos',
-    COMBOS: 'combos'
+    COMBOS: 'combos',
+    COFFIES: 'coffies'
 });
 
 export const productos = [
@@ -32,4 +33,13 @@ export const combos = [
         contenido: ["Dos Lattes", "2 Sanduches de la casa", "Porción de cheesecake"], 
         categoria: ["Bebidas_calientes", "Salados", "Dulces"]
     }
+];
+
+export const coffies = [
+        { 
+        nombre: "Racoon bed", precio: 2.00, 
+        imagen: "images/productos/Mocachino.png", 
+        categoria: ["Dulces"] 
+    },
+
 ];
