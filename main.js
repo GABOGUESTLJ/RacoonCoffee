@@ -49,6 +49,15 @@ document.querySelectorAll('.btn_filter_combos').forEach(boton => {
     });
 });
 
+//Filtro para la seleccion especial
+document.querySelectorAll('.btn_filter_coffies').forEach(boton => {
+    boton.addEventListener('click', () => {
+        const cat = boton.getAttribute('data-cat');
+        const filtrados = cat === 'todos' ? coffies : coffies.filter(c => c.categoria.includes(cat));
+        renderizarItems(filtrados, coffies_container);
+    });
+});
+
 // 4. LISTENERS DE NAVEGACIÓN (Los sensores del sistema)
 // Escucha de cambios en la URL (Botón atrás/adelante del navegador)
 window.addEventListener('hashchange', () => {
@@ -65,6 +74,7 @@ header_racoon_coffies.addEventListener('click', (e) => { e.preventDefault(); nav
 // Navegación desde botones internos
 btn_explorar_m_hero.addEventListener('click', () => navegar(Vistas.MENU, seccionesMap));
 btn_explorar_combos_menu.addEventListener('click', () => navegar(Vistas.COMBOS, seccionesMap));
+
 
 // Sidebar Toggle
 btn_Menu_SB.addEventListener('click', () => btn_Sidebar.classList.toggle('active'));

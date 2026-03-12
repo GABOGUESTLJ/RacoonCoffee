@@ -252,14 +252,12 @@ btn_explorar_menu_hero:hover {
 #menu_section {
     display: none; 
     padding: 100px 5%;
-    background-color: var(--light-bg);
     color: #0a0a0a;
 }
 
 #combos_section {
     display: none; 
     padding: 100px 5%;
-    background-color: var(--light-bg);
     color: #0a0a0a;
 }
 
@@ -313,3 +311,9 @@ btn_explorar_menu_hero:hover {
     font-size: 1.2rem;
     margin-bottom: 15px;
 }
+#coffies_section {
+    display: none; 
+    padding: 100px 5%;
+    color: #0a0a0a;
+}
+
