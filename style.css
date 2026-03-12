@@ -220,7 +220,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 /* 4. Efecto de Impulso (Hover) */
-btn_explorar_menu_hero:hover {
+.btn_explorar_menu_hero:hover {
     background-color: #3d2b1f; /* Aclara la madera al tocarla */
     transform: translateY(-3px); /* Pequeño salto de calidad */
     box-shadow: var(--light-bg); 
