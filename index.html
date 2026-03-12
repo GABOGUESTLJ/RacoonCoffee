@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RacoonCoffee | Energía de Élite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <button id="btn-menu-sb" class="header-btn">≡</button>
+            <h1 class="header-logo"><a href="#" class="header-link">Racoon <span>Coffee</span></a></h1>
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li class="header_productos"><a href="#" class="header-link">Productos</a></li>
+                    <li class="header_combos"><a href="#" class="header-link">Combos</a></li>
+                    <li class="header-item"><a href="#" class="header-link">RacoonCoffies <span class="SPECIAL_WORD">(LIMIT TIME⌛)</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+        <button class="btn-close-sb">X</button>
+        <nav class="sidebar-list">
+            <li class="sidebar-item"><a href="#" class="sidebar-link">Sobre nosotros</a></li>
+            <li class="sidebar-item"><a href="#" class="sidebar-link">Trabaja con nosotros</a></li>
+            <li class="sidebar-item"><a href="#" class="sidebar-link">Recetas</a></li>
+        </nav>
+    </aside>
+    
+    <main>
+        <section id="hero">
+            <div class="hero_container">
+                <h2 class="hero_tittle">El café que despierta tu mapache interior</h2>
+                <button class="btn_explorar_menu_hero">Explorar menú</button>
+            </div>
+        </section>
+
+        <section id="menu_section">
+            <h2>Nuestra Selección Japonesa</h2>
+            <div class="filtros_container">
+                <button class="btn_filter_menu" data-cat="todos">Todos</button>
+                <button class="btn_filter_menu" data-cat="Bebidas_calientes">Calientes</button>
+                <button class="btn_filter_menu" data-cat="Bebidas_frias">Frías</button>
+                <button class="btn_filter_menu" data-cat="Salados">Salados</button>
+                <button class="btn_filter_menu" data-cat="Dulces">Dulces</button>
+            </div>
+            <div id="productos_container" class="menu_grid"></div>
+            <button class="btn_explorar_combos_menu">Explorar combos</button>
+        </section>
+
+        <section id="combos_section">
+            <h2>Combos Exclusivos</h2>
+            <div class="filtros_container">
+                <button class="btn_filter_combos" data-cat="todos">Todos los Combos</button>
+                <button class="btn_filter_combos" data-cat="Salados">Salados</button>
+                <button class="btn_filter_combos" data-cat="Dulces">Dulces</button>
+                <button class="btn_filter_combos" data-cat="Bebidas_calientes">Con Café Caliente</button>
+            </div>
+            <div id="combos_container" class="menu_grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <div class="footer_contact_info">
+                <h2 class="phone_footer"><i class="fa-solid fa-phone"></i> 123456789</h2>
+                <h2 class="enveloper_footer"><i class="fa-solid fa-envelope"></i> racooncoffee@prueba.com</h2>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/259fe0d78b.js" crossorigin="anonymous"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
